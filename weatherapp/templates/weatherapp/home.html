@@ -37,7 +37,7 @@
             <h5 class="card-title">{{ city.city }}</h5>
             <P class="card-title">{{ city.temp }} <span>&#8451;</span></P>
             <p class="card-text">{{ city.desc }}</p>
-            <a href="#">DELETE</a>
+            <a href="{% url 'delete' city.city.id %}">DELETE</a>
             <!-- <button>
                 <a href="#">Delete</a>
             </button> -->
