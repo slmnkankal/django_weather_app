@@ -20,7 +20,7 @@ def home(request):
                 City.objects.create(name=r_city)
                 messages.success(request, 'City created!')
         else:
-            messages.error(request, 'There is no city!')
+            messages.error(request, 'There is no such city!')
         return redirect('home')
     
     city_data = []
@@ -37,7 +37,7 @@ def home(request):
             'desc' : content['weather'][0]['description'],
         }
         city_data.append(data)
-        pprint(city_data)
+        # pprint(city_data)
         
     context = {
         'city_data': city_data,
